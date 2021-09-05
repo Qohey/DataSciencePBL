@@ -103,12 +103,8 @@ celerybeat.pid
 
 # Environments
 .env
-.venv
 env/
-venv/
-ENV/
 env.bak/
-venv.bak/
 
 # Spyder project settings
 .spyderproject
@@ -117,8 +113,6 @@ venv.bak/
 # Rope project settings
 .ropeproject
 
-# mkdocs documentation
-/site
 
 # mypy
 .mypy_cache/
@@ -127,3 +121,5 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+dataset/
+*.csv
