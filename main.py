@@ -2,7 +2,6 @@
 
 import sys
 import os
-from icecream.icecream import colorize
 import numpy as np
 import pandas as pd
 from utils.option import Option
@@ -19,7 +18,7 @@ def init(opt):
         with open(output_file, "w", encoding="UTF-8") as f:
             f.write("")
     else: #ファイルが重複したときは上書き確認
-        print(output_file + "はすでに存在しています。上書きしますか？Y/n")
+        print(output_file + "はすでに存在しています。\n上書きしますか？Y/n")
         if input() == "Y":
             with open(output_file, "w", encoding="UTF-8") as f:
                 f.write("")
@@ -36,6 +35,8 @@ def valid_path(opt):
         errors.append("input_nameを指定してください")
     elif not os.path.isfile(input_file):
         errors.append(input_file + "が見つかりません")
+    if opt.output_name == "":
+        errors.append("output_nameを指定してください")
     if 0 < len(errors):
         print("==================Errors==================")
         for err in errors:
