@@ -3,6 +3,7 @@
 import os
 import argparse
 from pprint import pprint
+from datetime import datetime as dt
 
 class Option():
     def __init__(self):
@@ -16,7 +17,7 @@ class Option():
         self.parser.add_argument("-id", "--input_dir", type=str, default="", help="解析するデータのフォルダ(dataset直下のフォルダ)")
         self.parser.add_argument("-in", "--input_name", type=str, default="", help="解析するデータのファイル名")
         self.parser.add_argument("-od", "--output_dir", type=str, default="", help="result直下に出力するフォルダ")
-        self.parser.add_argument("-on", "--output_name", type=str, default="result", help="解析結果の出力ファイル名(拡張子なし)")
+        self.parser.add_argument("-on", "--output_name", type=str, default="result_" + dt.now().strftime('%m%d-%H%M%S'), help="解析結果の出力ファイル名(拡張子なし)")
 
         # ===============================================================
         #                     Analysis options
