@@ -124,3 +124,4 @@ dmypy.json
 dataset/
 result/
 *.csv
+.DS_Store
