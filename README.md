@@ -40,12 +40,28 @@ brew install pyenv
 pyenv install 3.8.8
 pyenv local 3.8.8
 python -m venv .env
+```
+### Windows
+DataSciencePBLフォルダに移動
+
+---
+<br>
+
+## 仮想環境の入り方
+### Mac
+```
 # bashの場合
 source .env/bin/activate
 # fishの場合
 source .env/bin/activate.fish
 ```
 詳しくは[こちら](https://qiita.com/m3y/items/45c7be319e401b24fca8)
+
+### Windows
+```
+source .env/bin/activate
+```
+---
 <br>
 
 ## ライブラリ関係のインストール
@@ -54,3 +70,10 @@ pipで以下のライブラリをインストール
 - amatplotlib
 - pandas
 - icecream
+---
+<br>
+
+## 仮想環境からの抜け方
+```
+deactivate
+```
