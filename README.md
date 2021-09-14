@@ -67,7 +67,7 @@ source .env/bin/activate
 ## ライブラリ関係のインストール
 pipで以下のライブラリをインストール
 - numpy
-- amatplotlib
+- matplotlib
 - pandas
 - icecream
 ---
